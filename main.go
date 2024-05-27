@@ -1,7 +1,24 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	input := &TreeNode{
+		Val:  1,
+		Left: nil,
+		Right: &TreeNode{
+			Val: 2,
+			Left: &TreeNode{
+				Val:   3,
+				Left:  nil,
+				Right: nil,
+			},
+			Right: nil,
+		},
+	}
+
+	output := inorderTraversal(input)
+	fmt.Println(output)
 }
 
 type TreeNode struct {
